@@ -1,17 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="css/styles.css"> 
-  <title>Próximamente | Nexoria</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
+    <title>Nexoria - Tecnología y eCommerce</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js"></script>
 </head>
-<body>
- <!-- <img src="https://via.placeholder.com/120x120.png?text=Logo" alt="Logo de Nexoria" class="logo" />-->
-  <h1>¡Próximamente!</h1>
-  <p>Estamos trabajando para traerte algo increíble. Muy pronto estaremos en línea.</p>
-  <div class="footer">© 2025 Nexoria SpA</div>
-</body>
-</html>
 
+<body>
+    <header>
+        <div class="container header-flex">
+            <img src="assets/logo-nexoria.png" alt="Logo Nexoria" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#sobre">Sobre mí</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Impulsamos tu crecimiento digital</h1>
+            <p>Consultoría especializada en eCommerce y tecnología para PYMEs</p>
+            <a href="#contacto" class="btn">Agenda una reunión</a>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2>Servicios</h2>
+            <div class="grid">
+                <div class="service-item">
+                    <h3>Catalogación de productos</h3>
+                    <p>Optimización de fichas con foco en SEO y conversión.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Auditoría SEO</h3>
+                    <p>Mejoras en posicionamiento orgánico y estructura técnica.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Asesoría eCommerce</h3>
+                    <p>Te guiamos en estrategias, plataformas y buenas prácticas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="about">
+        <div class="container">
+            <h2>Sobre Nexoria</h2>
+            <p>Soy Pamela Ormeño, profesional del área tecnológica con más de 5 años de experiencia impulsando proyectos
+                digitales. Nexoria nace para entregar asesorías personalizadas y soluciones reales a pymes que buscan
+                destacar en el mundo digital.</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Escríbenos a <strong>contacto@nexoria.cl</strong> o completa el siguiente formulario:</p>
+            <form id="contact-form" action="https://formsubmit.co/contacto@nexoria.cl" method="POST">
+                <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" required />
+                <input type="email" name="correo" id="correo" placeholder="Tu correo" required />
+                <textarea name="mensaje" id="mensaje" placeholder="Mensaje" required></textarea>
+
+                <!-- Opcional: evita captcha de formsubmit -->
+                <input type="hidden" name="_captcha" value="false" />
+
+                <!-- Evita redireccionamiento para manejarlo manualmente -->
+                <input type="hidden" name="_next" value="https://nexoria.cl/#contacto" />
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+
+            <!-- Mensaje visual -->
+            <p id="mensaje-exito" style="display:none; color: green; margin-top: 10px;">
+                ¡Gracias! Tu mensaje fue enviado correctamente.
+            </p>
+
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nexoria SpA - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
