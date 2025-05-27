@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -8,8 +11,9 @@ body {
 
 .container {
   width: 90%;
-  max-width: 960px;
-  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1rem;
+  margin: auto;
 }
 
 /* HEADER */
@@ -22,6 +26,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -76,14 +81,13 @@ section {
 
 /* GRID DE SERVICIOS */
 .grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .service-item {
-  flex: 1;
-  min-width: 280px;
   background: white;
   border-left: 4px solid #39B1C4;
   padding: 20px;
@@ -96,7 +100,8 @@ form {
   margin-top: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: inherit;
   width: 100%;
   padding: 10px;
@@ -115,7 +120,7 @@ form button {
   cursor: pointer;
   font-weight: 600;
   display: block;
-  margin-left: auto;   /* para alinearlo a la derecha */
+  margin-left: auto;
   margin-top: 10px;
   width: 100%;
   text-align: center;
@@ -134,4 +139,69 @@ footer {
   text-align: center;
   padding: 20px 0;
   font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES: RESPONSIVE */
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    background-color: #0A1A2F;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  form button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p,
+  li,
+  a,
+  button {
+    font-size: 0.95rem;
+  }
+
+  .logo {
+    height: 40px;
+  }
 }
