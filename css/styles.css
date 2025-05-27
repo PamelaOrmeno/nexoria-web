@@ -205,3 +205,23 @@ footer {
     height: 40px;
   }
 }
+#btnSubir {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: opacity 0.3s ease;
+}
+
+#btnSubir:hover {
+  background-color: #555;
+}

@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // --- Envío de formulario de contacto ---
   const form = document.getElementById("contact-form");
   const mensajeExito = document.getElementById("mensaje-exito");
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevenir comportamiento por defecto
+    e.preventDefault();
 
     const datos = new FormData(form);
 
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(() => {
           mensajeExito.style.display = "none";
-        }, 5000); // Ocultar a los 5 segundos
+        }, 5000);
 
         form.reset();
       } else {
@@ -28,5 +29,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }).catch(error => {
       alert("Hubo un problema al enviar el mensaje.");
     });
+  });
+
+  // --- Botón "Volver arriba" ---
+  const btn = document.getElementById("btnSubir");
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  btn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
