@@ -12,25 +12,28 @@
 </head>
 
 <body>
-    <header>
+    <header class="site-header">
         <div class="container header-flex">
-            <img src="assets/logo-nexoria.png" alt="Logo Nexoria" class="logo">
+            <a jhref="#inicio">
+                <img src="assets/logo-nexoria.png" alt="Logo Nexoria" class="logo">
+            </a>
             <nav>
-                <ul>
+                <ul class="nav-list">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#sobre">Sobre mí</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
+            <a href="#contacto" class="btn-header">Agenda una reunión</a>
         </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="container">
-            <h1>Impulsamos tu crecimiento digital</h1>
-            <p>Consultoría especializada en eCommerce y tecnología para PYMEs</p>
-            <a href="#contacto" class="btn">Agenda una reunión</a>
+    <section id="inicio" class="hero-visual">
+        <div class="overlay">
+            <h1>Impulsamos tu eCommerce al siguiente nivel</h1>
+            <p>Consultoría estratégica para tiendas online que quieren vender más y destacarse.</p>
+            <a href="#contacto" class="btn-hero">Agenda una reunión gratuita</a>
         </div>
     </section>
 
@@ -57,9 +60,11 @@
     <section id="sobre" class="about">
         <div class="container">
             <h2>Sobre Nexoria</h2>
-            <p>Soy Pamela Ormeño, profesional del área tecnológica con más de 5 años de experiencia impulsando proyectos
-                digitales. Nexoria nace para entregar asesorías personalizadas y soluciones reales a pymes que buscan
-                destacar en el mundo digital.</p>
+            <p>Nexoria es una consultora especializada en soluciones digitales para eCommerce. Nuestro propósito es
+                ayudar a pymes a mejorar su presencia online mediante asesorías estratégicas, optimización de productos
+                y posicionamiento SEO. Con experiencia en proyectos tecnológicos, ofrecemos un acompañamiento integral
+                que impulsa resultados concretos.</p>
+
         </div>
     </section>
 
@@ -95,7 +100,7 @@
             <p>&copy; 2025 Nexoria SpA - Todos los derechos reservados</p>
         </div>
     </footer>
-<button id="btnSubir" title="Volver arriba">↑</button>
+    <button id="btnSubir" title="Volver arriba">↑</button>
 
 </body>
 
